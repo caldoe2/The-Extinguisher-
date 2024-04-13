@@ -30,7 +30,7 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
-	move_and_slide()
+	move_and_slide()	
 	if Input.is_action_pressed("fire"):
 		var mouse_pos = get_viewport().get_mouse_position()
 		var angle = atan((position[1] - mouse_pos[1])/(position[0] - mouse_pos[0]))

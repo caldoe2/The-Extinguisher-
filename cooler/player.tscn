@@ -21,6 +21,10 @@ animations = [{
 position = Vector2(0, -32)
 script = ExtResource("1_5xlkq")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(13, 11.5)
+zoom = Vector2(2, 2)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(13, 11.5)
 shape = SubResource("RectangleShape2D_gof6l")
