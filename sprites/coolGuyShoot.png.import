@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8k72aiwqevvb"
-path="res://.godot/imported/coolGuyShootR.png-1a6c28474c082554959bbc1f29908358.ctex"
+uid="uid://6t0qdhx044fm"
+path="res://.godot/imported/coolGuyShoot.png-69e948e408671c70c9a121d1249816a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/coolGuyShootR.png"
-dest_files=["res://.godot/imported/coolGuyShootR.png-1a6c28474c082554959bbc1f29908358.ctex"]
+source_file="res://sprites/coolGuyShoot.png"
+dest_files=["res://.godot/imported/coolGuyShoot.png-69e948e408671c70c9a121d1249816a8.ctex"]
 
 [params]
 

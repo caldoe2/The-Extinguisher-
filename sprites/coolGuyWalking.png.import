@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dubymjcjjqre3"
-path="res://.godot/imported/coolGuyGrabL.png-c7b64331e7552698efbeb73095b07842.ctex"
+uid="uid://b4vkhrerscs6m"
+path="res://.godot/imported/coolGuyWalking.png-569fc24e0ffcb0d01491c2045b0017f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/coolGuyGrabL.png"
-dest_files=["res://.godot/imported/coolGuyGrabL.png-c7b64331e7552698efbeb73095b07842.ctex"]
+source_file="res://sprites/coolGuyWalking.png"
+dest_files=["res://.godot/imported/coolGuyWalking.png-569fc24e0ffcb0d01491c2045b0017f1.ctex"]
 
 [params]
 
