@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbohglf0kpwmd"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_foo1k"]
+
+[sub_resource type="Gradient" id="Gradient_vcmt0"]
+offsets = PackedFloat32Array(0, 0.554217, 0.76506, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.554217, 0.554217, 0.554217, 1, 0.76506, 0.76506, 0.76506, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dxvs0"]
+gradient = SubResource("Gradient_vcmt0")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lobu"]
+
+[node name="Player" type="Area2D"]
+position = Vector2(251, 16)
+script = ExtResource("1_foo1k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(60, 583)
+scale = Vector2(0.273438, 62.5)
+texture = SubResource("GradientTexture1D_dxvs0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4lobu")
+debug_color = Color(0.956863, 0, 0.541176, 0.419608)
