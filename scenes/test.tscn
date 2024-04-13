@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7ukak0d1xkvq"]
+
+[ext_resource type="PackedScene" uid="uid://cc4iklxgmadsy" path="res://cooler/player.tscn" id="1_s66h1"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vdumm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmdqv"]
+size = Vector2(579, 32)
+
+[node name="Main" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_s66h1")]
+position = Vector2(280, 426)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(302, 535)
+physics_material_override = SubResource("PhysicsMaterial_vdumm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-3, 3)
+shape = SubResource("RectangleShape2D_kmdqv")
