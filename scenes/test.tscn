@@ -2,25 +2,27 @@
 
 [ext_resource type="PackedScene" uid="uid://cc4iklxgmadsy" path="res://cooler/player.tscn" id="1_s66h1"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_upv77"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2l2c"]
+size = Vector2(1218, 54)
 
-[sub_resource type="Gradient" id="Gradient_pefcl"]
-offsets = PackedFloat32Array(0, 0.0324675)
+[sub_resource type="Gradient" id="Gradient_dvchp"]
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_pi4us"]
-gradient = SubResource("Gradient_pefcl")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_exssn"]
+gradient = SubResource("Gradient_dvchp")
 
 [node name="Main" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_s66h1")]
 position = Vector2(280, 426)
 
-[node name="test" type="StaticBody2D" parent="."]
-position = Vector2(495, 376)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(750, 308)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="test"]
-shape = SubResource("CapsuleShape2D_upv77")
-debug_color = Color(0.941176, 0, 0.603922, 0.419608)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-161, 308)
+shape = SubResource("RectangleShape2D_w2l2c")
 
-[node name="Sprite2D" type="Sprite2D" parent="test/CollisionShape2D"]
-texture = SubResource("GradientTexture2D_pi4us")
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
+position = Vector2(-29, 3)
+scale = Vector2(18.0156, 1)
+texture = SubResource("GradientTexture2D_exssn")

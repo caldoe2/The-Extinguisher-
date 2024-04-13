@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cc4iklxgmadsy"]
+[gd_scene load_steps=9 format=3 uid="uid://cc4iklxgmadsy"]
 
 [ext_resource type="Script" path="res://cooler/player.gd" id="1_5xlkq"]
 [ext_resource type="Texture2D" uid="uid://ctylhtvgxr0gj" path="res://sprites/coolGuyIdleL.png" id="2_vgkqb"]
+[ext_resource type="PackedScene" uid="uid://c8qcqfxgppuqj" path="res://scenes/muzzle.tscn" id="3_l4nhn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gof6l"]
 size = Vector2(26, 41)
@@ -17,6 +18,14 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mcbvq"]
+
+[sub_resource type="Gradient" id="Gradient_pefcl"]
+offsets = PackedFloat32Array(0, 0.0324675)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cr8cr"]
+gradient = SubResource("Gradient_pefcl")
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(0, -32)
 script = ExtResource("1_5xlkq")
@@ -30,3 +39,15 @@ position = Vector2(14, 11)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_1xlsa")
 animation = &"idle"
+
+[node name="Muzzle" parent="." instance=ExtResource("3_l4nhn")]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Muzzle"]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CapsuleShape2D_mcbvq")
+debug_color = Color(0.941176, 0, 0.603922, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="Muzzle/CollisionShape2D"]
+scale = Vector2(0.5, 0.5)
+texture = SubResource("GradientTexture2D_cr8cr")

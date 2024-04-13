@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxkbp4lvga4qx"
-path="res://.godot/imported/coolGuyIdleR.png-4e4fe3bf4cf0adb2fcbed8deadfd68ed.ctex"
+uid="uid://bw3vsl32y1sno"
+path="res://.godot/imported/coolGuyIdle.png-2361f014eadd0826185f70d96714c02f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/coolGuyIdleR.png"
-dest_files=["res://.godot/imported/coolGuyIdleR.png-4e4fe3bf4cf0adb2fcbed8deadfd68ed.ctex"]
+source_file="res://sprites/coolGuyIdle.png"
+dest_files=["res://.godot/imported/coolGuyIdle.png-2361f014eadd0826185f70d96714c02f.ctex"]
 
 [params]
 
