@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b43m8nx8ydppk"
-path="res://.godot/imported/grassedgeL.png-d1b94894c171bf12c32cebb1b6529e58.ctex"
+uid="uid://ctylhtvgxr0gj"
+path="res://.godot/imported/coolGuyIdleL.png-afdda4d4c3240846214fff632e80d879.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/grassedgeL.png"
-dest_files=["res://.godot/imported/grassedgeL.png-d1b94894c171bf12c32cebb1b6529e58.ctex"]
+source_file="res://sprites/coolGuyIdleL.png"
+dest_files=["res://.godot/imported/coolGuyIdleL.png-afdda4d4c3240846214fff632e80d879.ctex"]
 
 [params]
 
