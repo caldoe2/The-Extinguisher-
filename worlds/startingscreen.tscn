@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bgn1lk5x2y8mg"]
+[gd_scene load_steps=4 format=3 uid="uid://bgn1lk5x2y8mg"]
 
 [ext_resource type="Script" path="res://worlds/startingscreen.gd" id="1_vf12a"]
+[ext_resource type="Texture2D" uid="uid://b02e33jr7la2i" path="res://sprites/playbutton.png" id="2_jfgon"]
+[ext_resource type="Texture2D" uid="uid://clveuqwnkv1wo" path="res://sprites/quitbutton.png" id="3_txfel"]
 
 [node name="startingscreen" type="Node2D"]
 script = ExtResource("1_vf12a")
@@ -11,13 +13,14 @@ offset_top = 444.0
 offset_right = 326.0
 offset_bottom = 524.0
 text = "Play "
+icon = ExtResource("2_jfgon")
 
 [node name="quitbutton" type="Button" parent="."]
 offset_left = 816.0
 offset_top = 444.0
 offset_right = 963.0
 offset_bottom = 524.0
-text = "Quit"
+icon = ExtResource("3_txfel")
 
 [connection signal="pressed" from="startbutton" to="." method="_on_startbutton_pressed"]
 [connection signal="pressed" from="quitbutton" to="." method="_on_quitbutton_pressed"]
