@@ -14,6 +14,12 @@ config/name="The-extinguisher-"
 run/main_scene="res://worlds/startscreen.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=960
+window/stretch/mode="viewport"
+
 [dotnet]
 
 project/assembly_name="The-extinguisher-"
