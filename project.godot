@@ -10,13 +10,9 @@ config_version=5
 
 [application]
 
-config/name="TheExtinguisher"
+config/name="The-extinguisher-"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
-
-[dotnet]
-
-project/assembly_name="TheExtinguisher"
 
 [rendering]
 
