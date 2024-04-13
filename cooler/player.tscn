@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cc4iklxgmadsy"]
+[gd_scene load_steps=4 format=3 uid="uid://cc4iklxgmadsy"]
 
 [ext_resource type="Script" path="res://cooler/player.gd" id="1_5xlkq"]
-[ext_resource type="Texture2D" uid="uid://ctylhtvgxr0gj" path="res://sprites/coolGuyIdleL.png" id="2_vgkqb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gof6l"]
 size = Vector2(26, 41)
@@ -10,7 +9,7 @@ size = Vector2(26, 41)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_vgkqb")
+"texture": null
 }],
 "loop": true,
 "name": &"idle",
