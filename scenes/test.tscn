@@ -1,11 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7ukak0d1xkvq"]
+[gd_scene load_steps=8 format=3 uid="uid://b7ukak0d1xkvq"]
 
 [ext_resource type="PackedScene" uid="uid://cc4iklxgmadsy" path="res://cooler/player.tscn" id="1_s66h1"]
+[ext_resource type="Texture2D" uid="uid://hck6gsnvd5m2" path="res://sprites/grass.png" id="2_2r76o"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vdumm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kmdqv"]
-size = Vector2(579, 32)
+size = Vector2(602, 32)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_upv77"]
+
+[sub_resource type="Gradient" id="Gradient_pefcl"]
+offsets = PackedFloat32Array(0, 0.0324675)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pi4us"]
+gradient = SubResource("Gradient_pefcl")
 
 [node name="Main" type="Node2D"]
 
@@ -17,5 +26,33 @@ position = Vector2(302, 535)
 physics_material_override = SubResource("PhysicsMaterial_vdumm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-3, 3)
+position = Vector2(-14, 3)
 shape = SubResource("RectangleShape2D_kmdqv")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
+position = Vector2(47.375, -1.44243e-05)
+scale = Vector2(30.2031, 2)
+texture = ExtResource("2_2r76o")
+
+[node name="test" type="StaticBody2D" parent="."]
+position = Vector2(495, 376)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test"]
+shape = SubResource("CapsuleShape2D_upv77")
+debug_color = Color(0.941176, 0, 0.603922, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="test/CollisionShape2D"]
+texture = SubResource("GradientTexture2D_pi4us")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(972, 522)
+physics_material_override = SubResource("PhysicsMaterial_vdumm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-206, 18)
+shape = SubResource("RectangleShape2D_kmdqv")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2/CollisionShape2D"]
+position = Vector2(47.375, -1.44243e-05)
+scale = Vector2(30.2031, 2)
+texture = ExtResource("2_2r76o")
