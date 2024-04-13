@@ -1,21 +1,32 @@
 [gd_scene load_steps=5 format=3 uid="uid://cc4iklxgmadsy"]
 
 [ext_resource type="Script" path="res://cooler/player.gd" id="1_5xlkq"]
+[ext_resource type="Texture2D" uid="uid://ctylhtvgxr0gj" path="res://sprites/coolGuyIdleL.png" id="2_vgkqb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gof6l"]
+size = Vector2(26, 41)
 
-[sub_resource type="Gradient" id="Gradient_fnxqb"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_mlvbf"]
-gradient = SubResource("Gradient_fnxqb")
+[sub_resource type="SpriteFrames" id="SpriteFrames_1xlsa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vgkqb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(0, -32)
 script = ExtResource("1_5xlkq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 20)
+position = Vector2(13, 11.5)
 shape = SubResource("RectangleShape2D_gof6l")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("GradientTexture2D_mlvbf")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(14, 11)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_1xlsa")
+animation = &"idle"
