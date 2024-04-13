@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="The-extinguisher-"
+run/main_scene="res://worlds/startingscreen.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
 
 [rendering]
 
