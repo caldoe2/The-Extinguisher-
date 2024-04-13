@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cc4iklxgmadsy"]
+
+[ext_resource type="Script" path="res://cooler/player.gd" id="1_5xlkq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gof6l"]
+
+[sub_resource type="Gradient" id="Gradient_fnxqb"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mlvbf"]
+gradient = SubResource("Gradient_fnxqb")
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(0, -32)
+script = ExtResource("1_5xlkq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 32)
+shape = SubResource("RectangleShape2D_gof6l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_mlvbf")
