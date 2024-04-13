@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="The-extinguisher-"
-run/main_scene="res://worlds/startingscreen.tscn"
+run/main_scene="res://worlds/startscreen.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 
 [dotnet]
