@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cc4iklxgmadsy"]
 
 [ext_resource type="Script" path="res://cooler/player.gd" id="1_5xlkq"]
-[ext_resource type="PackedScene" uid="uid://kqqakpejco01" path="res://scenes/muzzle.tscn" id="3_l4nhn"]
+[ext_resource type="Script" path="res://sprites/rocket.gd" id="2_r2lnf"]
 [ext_resource type="Texture2D" uid="uid://bw3vsl32y1sno" path="res://sprites/coolGuyIdle.png" id="3_n4tvm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gof6l"]
@@ -40,8 +40,9 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_1xlsa")
 animation = &"idle"
 
-[node name="Muzzle" parent="." instance=ExtResource("3_l4nhn")]
-visible = false
+[node name="Muzzle" type="StaticBody2D" parent="."]
+position = Vector2(14, -18)
+script = ExtResource("2_r2lnf")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Muzzle"]
 scale = Vector2(0.5, 0.5)
