@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://hn7ffrft78yv"]
+
+[ext_resource type="Script" path="res://cooler/extingusher.gd" id="1_hh4w6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_slrmy"]
+
+[node name="Extingusher" type="Node2D"]
+script = ExtResource("1_hh4w6")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_slrmy")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Area2D"]
+amount = 5000
+lifetime = 3.55
+preprocess = 118.92
+explosiveness = 0.25
+randomness = 1.0
+lifetime_randomness = 0.6
+fixed_fps = 1000
+emission_shape = 1
+emission_sphere_radius = 10.0
+direction = Vector2(0, 9)
+spread = 41.89
+gravity = Vector2(0, 300)
+
+[connection signal="draw" from="Area2D/CPUParticles2D" to="." method="_on_cpu_particles_2d_draw"]

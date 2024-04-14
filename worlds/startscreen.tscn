@@ -9,7 +9,7 @@
 script = ExtResource("1_awoik")
 
 [node name="Main-title-new" type="Sprite2D" parent="."]
-position = Vector2(640, 480)
+position = Vector2(648.5, 480)
 texture = ExtResource("2_2t20q")
 
 [node name="playbutton" type="Button" parent="."]

@@ -9,12 +9,9 @@ size = Vector2(26, 41)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1xlsa"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": null
-}],
+"frames": [],
 "loop": true,
-"name": &"idle",
+"name": &"new_animation",
 "speed": 5.0
 }]
 
@@ -38,6 +35,9 @@ shape = SubResource("RectangleShape2D_gof6l")
 position = Vector2(14, 11)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_1xlsa")
+<<<<<<< HEAD
+animation = &"new_animation"
+=======
 animation = &"idle"
 
 [node name="Muzzle" type="StaticBody2D" parent="."]
@@ -57,3 +57,4 @@ texture = SubResource("GradientTexture2D_cr8cr")
 position = Vector2(13, 13)
 scale = Vector2(0.119718, 0.119718)
 texture = ExtResource("3_n4tvm")
+>>>>>>> b3249c3baad8aa75c1f05b037d376ead346ad2d4
