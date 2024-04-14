@@ -1,6 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://b7ukak0d1xkvq"]
 
 [ext_resource type="PackedScene" uid="uid://cc4iklxgmadsy" path="res://cooler/player.tscn" id="1_s66h1"]
+<<<<<<< HEAD
+=======
+[ext_resource type="PackedScene" uid="uid://becafi6yla2xp" path="res://scenes/rocket.tscn" id="2_16y70"]
+>>>>>>> 5f47078986e2602b87ada095542fbfa3992a7271
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w2l2c"]
 size = Vector2(1218, 54)
@@ -26,3 +30,9 @@ shape = SubResource("RectangleShape2D_w2l2c")
 position = Vector2(-29, 3)
 scale = Vector2(18.0156, 1)
 texture = SubResource("GradientTexture2D_exssn")
+<<<<<<< HEAD
+=======
+
+[node name="Area2D" parent="." instance=ExtResource("2_16y70")]
+position = Vector2(1026, 379)
+>>>>>>> 5f47078986e2602b87ada095542fbfa3992a7271

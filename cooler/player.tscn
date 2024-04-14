@@ -1,6 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://cc4iklxgmadsy"]
 
 [ext_resource type="Script" path="res://cooler/player.gd" id="1_5xlkq"]
+<<<<<<< HEAD
+=======
+[ext_resource type="Script" path="res://sprites/rocket.gd" id="2_r2lnf"]
+[ext_resource type="Texture2D" uid="uid://bw3vsl32y1sno" path="res://sprites/coolGuyIdle.png" id="3_n4tvm"]
+>>>>>>> 5f47078986e2602b87ada095542fbfa3992a7271
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gof6l"]
 size = Vector2(26, 41)
@@ -30,3 +35,27 @@ position = Vector2(14, 11)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_1xlsa")
 animation = &"new_animation"
+<<<<<<< HEAD
+=======
+=======
+animation = &"idle"
+
+[node name="Muzzle" type="StaticBody2D" parent="."]
+position = Vector2(14, -18)
+script = ExtResource("2_r2lnf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Muzzle"]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CapsuleShape2D_mcbvq")
+debug_color = Color(0.941176, 0, 0.603922, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="Muzzle/CollisionShape2D2"]
+scale = Vector2(0.5, 0.5)
+texture = SubResource("GradientTexture2D_cr8cr")
+
+[node name="CoolGuyIdle" type="Sprite2D" parent="."]
+position = Vector2(13, 13)
+scale = Vector2(0.119718, 0.119718)
+texture = ExtResource("3_n4tvm")
+>>>>>>> b3249c3baad8aa75c1f05b037d376ead346ad2d4
+>>>>>>> 5f47078986e2602b87ada095542fbfa3992a7271
