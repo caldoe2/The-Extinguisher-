@@ -28,10 +28,6 @@ sources/0 = SubResource("TileSetAtlasSource_8vm3x")
 
 [node name="homeWorld" type="Node2D"]
 
-[node name="Rocket" type="Node2D" parent="."]
-
-[node name="Area2D" type="Area2D" parent="Rocket"]
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_yvbay")
 collision_animatable = true
