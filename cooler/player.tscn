@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://cc4iklxgmadsy"]
 
 [ext_resource type="Script" path="res://cooler/player.gd" id="1_5xlkq"]
-[ext_resource type="Texture2D" uid="uid://ctylhtvgxr0gj" path="res://sprites/coolGuyIdleL.png" id="2_vgkqb"]
-[ext_resource type="PackedScene" uid="uid://c8qcqfxgppuqj" path="res://scenes/muzzle.tscn" id="3_l4nhn"]
+[ext_resource type="PackedScene" uid="uid://kqqakpejco01" path="res://scenes/muzzle.tscn" id="3_l4nhn"]
+[ext_resource type="Texture2D" uid="uid://bw3vsl32y1sno" path="res://sprites/coolGuyIdle.png" id="3_n4tvm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gof6l"]
 size = Vector2(26, 41)
@@ -11,7 +11,7 @@ size = Vector2(26, 41)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_vgkqb")
+"texture": null
 }],
 "loop": true,
 "name": &"idle",
@@ -43,11 +43,16 @@ animation = &"idle"
 [node name="Muzzle" parent="." instance=ExtResource("3_l4nhn")]
 visible = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Muzzle"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Muzzle"]
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CapsuleShape2D_mcbvq")
 debug_color = Color(0.941176, 0, 0.603922, 0.419608)
 
-[node name="Sprite2D" type="Sprite2D" parent="Muzzle/CollisionShape2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Muzzle/CollisionShape2D2"]
 scale = Vector2(0.5, 0.5)
 texture = SubResource("GradientTexture2D_cr8cr")
+
+[node name="CoolGuyIdle" type="Sprite2D" parent="."]
+position = Vector2(13, 13)
+scale = Vector2(0.119718, 0.119718)
+texture = ExtResource("3_n4tvm")

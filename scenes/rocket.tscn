@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://8t5kjidlb3n0"]
+
+[ext_resource type="Script" path="res://sprites/rocket.gd" id="1_eke47"]
+[ext_resource type="Texture2D" uid="uid://hck6gsnvd5m2" path="res://sprites/grass.png" id="2_p4k5h"]
+[ext_resource type="Texture2D" uid="uid://durtgtdnnyxpj" path="res://sprites/grassedge.png" id="3_tsnj6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5hakc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tb48p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_p4k5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tsnj6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Rocket" type="StaticBody2D"]
+script = ExtResource("1_eke47")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5hakc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
+top_level = true
+sprite_frames = SubResource("SpriteFrames_tb48p")
+frame_progress = 0.374465
