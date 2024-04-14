@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const speed = 200.0
+const speed = 300.0
 const jump_velocity = -400.0
 #var is_jumping = 0
 
@@ -31,18 +31,18 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, speed)
 
 	move_and_slide()
-	var mouse_pos = get_viewport().get_mouse_position()
-	var angle = atan((position[1] - mouse_pos[1])/(position[0] - mouse_pos[0]))
-	#print(position, mouse_pos, angle)
-	#position = position - mouse_pos
-	#sqrt((position[1] - mouse_pos[1])**2 + (position[0] - mouse_pos[0])**2)
-	var ang_vector = Vector2(-cos(angle) * 100, -sin(angle) * 100)
-	if position[0] < mouse_pos[0]:
-		ang_vector = Vector2(cos(angle) * 100, sin(angle) * 100)		#print(ang_vector)
-	self.get_node("Muzzle").global_position = position + ang_vector
-	
 	if Input.is_action_pressed("fire"):
-		#print(angle)
+		var mouse_pos = get_viewport().get_mouse_position()
+		var angle = atan((position[1] - mouse_pos[1])/(position[0] - mouse_pos[0]))
+		#print(position, mouse_pos, angle)
+		#position = position - mouse_pos
+		#sqrt((position[1] - mouse_pos[1])**2 + (position[0] - mouse_pos[0])**2)
+		var ang_vector = Vector2(-cos(angle) * 100, -sin(angle) * 100)
+		if position[0] < mouse_pos[0]:
+			ang_vector = Vector2(cos(angle) * 100, sin(angle) * 100)
+		#print(ang_vector)
+		get_parent().get_node("test").global_position = position + ang_vector
+		print(angle)
 		var multiplier = 1
 		if (ang_vector[0] < 0 and direction < 0) or (ang_vector[0] > 0 and direction >0):
 			multiplier = 0.5

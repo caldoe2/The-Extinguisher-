@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6qs83hfv63yh"
-path="res://.godot/imported/tilemapice.png-6721ae9d3b4523e8f82d63026bdeb106.ctex"
+uid="uid://bdrmefdt7f2ll"
+path="res://.godot/imported/RocketFire.png-1dec358828ca28c053668c064b4abc86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/tilemapice.png"
-dest_files=["res://.godot/imported/tilemapice.png-6721ae9d3b4523e8f82d63026bdeb106.ctex"]
+source_file="res://sprites/RocketFire.png"
+dest_files=["res://.godot/imported/RocketFire.png-1dec358828ca28c053668c064b4abc86.ctex"]
 
 [params]
 
