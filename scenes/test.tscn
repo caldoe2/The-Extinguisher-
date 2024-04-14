@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7ukak0d1xkvq"]
+[gd_scene load_steps=5 format=3 uid="uid://b7ukak0d1xkvq"]
 
 [ext_resource type="PackedScene" uid="uid://cc4iklxgmadsy" path="res://cooler/player.tscn" id="1_s66h1"]
-[ext_resource type="PackedScene" uid="uid://8t5kjidlb3n0" path="res://scenes/rocket.tscn" id="2_16y70"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w2l2c"]
 size = Vector2(1218, 54)
@@ -27,6 +26,3 @@ shape = SubResource("RectangleShape2D_w2l2c")
 position = Vector2(-29, 3)
 scale = Vector2(18.0156, 1)
 texture = SubResource("GradientTexture2D_exssn")
-
-[node name="Rocket" parent="." instance=ExtResource("2_16y70")]
-position = Vector2(842, 532)
